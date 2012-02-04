@@ -1,0 +1,13 @@
+A simple image resized created in PHP.
+
+Intended for images local to the script, simply pass the image location to the script:
+
+/resize-image.php?image=my_image.jpg
+
+The script will compare the image against what it has already cached, based on the modification time of the original image. If the image is new or hasn't been previously cached a new cached copy will be created and then displayed. If the image has already been cached it will be displayed from cache.
+
+Max image width and height can be passed to the script as so:
+
+/resize-image.php?image=my_image.jpg&w=1024&h=768
+
+The cached images are stored in a directory called 'cache', which has sub-directories for different image widths.
